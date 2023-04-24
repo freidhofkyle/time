@@ -1,0 +1,47 @@
+Powershell tutorial 1
+
+Creating Folders 
+
+New-Item 'C:\Test\' -ItemType Directory = This will create a directory 
+
+New-Item 'C:\Test\File.txt' -ItemType File = will create a file 
+
+Copy-Item .\Test\ 'C:\Users\boxwin' = This will copy a directory to a specfic location 
+
+Copy-Item .\File C:\Users\boxwin\Test\ = This will Copy a File To a specfic location 
+
+Copy-Item -Filter *.txt -Path C:\Users\boxwin\Templates\ = Simalar to Unix you can put The wildcard and it will copy wall files ending in the .txt to the specfic location 
+
+Remove-Item C:\Test\ = This will Remove a directory a spefic location 
+
+Remove-Item .\Files\File = Will create a file in a specfic directory 
+
+
+Move-Item .\Templates\ C:\Users\boxwin\Door\ = This will move a file to a specfic location 
+
+Move-Item .\test3.txt C:\Users\boxwin\Door\ = This will move a file to a specfic location
+
+Rename-Item .\test1.txt Ground.txt = This will rename a file 
+
+Rename-Item "D:\temp\Test Test1" = This will Rename a Directory 
+
+Test-Path .\Door\ = will see if a specfic folder exist if so it will return true if not it will return false 
+
+Test-Path .\Door\test3.txt = will see if the specfic file exiat if so it will return true if not will return false 
+
+# Part 2
+
+Get-Date = will give the current date and time and what day it is as well 
+
+set-date -Date (Get-Date).AddDays(1) = this will add one more day to the date 
+set-date -Date (Get-Date).AddDays(-1) = this will subtract one more day 
+
+
+Get-Date -DisplayHint Date = This will show only the date 
+
+Get-Date -DisplayHint Time = This will Display only the time 
+
+$timeToAdd = New-TimeSpan -Minutes -60
+set-date -adjust $timeToAdd = These cmdlets will adjust the time to 60 Minutes 
+ 
+
